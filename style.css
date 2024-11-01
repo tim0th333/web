@@ -1,0 +1,372 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p, li {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #2b2b52;
+    color: white;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Title "I AM TIMOTHY SITANGGANG" in Dark Blue */
+#about h1 {
+    font-size: 36px;
+    color: #2b2b52; /* Warna biru tua */
+}
+
+/* Welcome to My Portfolio Title in White */
+#portfolio h1 {
+    color: white; /* Warna putih untuk "Welcome to My Portfolio" */
+    font-size: 36px; /* Menjaga ukuran yang sama */
+}
+
+h2, h3 {
+    font-size: 28px;
+    color: #2b2b52;
+}
+
+#contact h2 {
+    color: white; /* Warna putih tetap untuk Contact Me */
+}
+
+/* Section styles */
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.about-photo {
+    flex: 1;
+    max-width: 300px;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.biodata {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.biodata li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Buttons for CV and LinkedIn */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2b2b52;
+}
+
+/* My Skills Section */
+#skills {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.skill {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 24px;
+    background-color: #2b2b52;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Education Section - Timeline with Yellow Circle on Vertical Line */
+#education {
+    background-color: #f4f4f9;
+    position: relative;
+    padding: 60px 0;
+}
+
+.education-grid {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+}
+
+.education-item {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.education-item h3 {
+    margin-bottom: 10px;
+    color: #2b2b52;
+}
+
+.education-item p {
+    font-size: 16px;
+}
+
+/* Vertical Line and Circle for Timeline */
+.education-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #2b2b52;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f39c12; /* Bulatan kuning */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Responsive layout for education timeline */
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-grid::before {
+        display: none;
+    }
+
+    .education-item {
+        padding-left: 40px;
+    }
+
+    .education-item::before {
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+/* Portfolio Section */
+#portfolio {
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px; /* Buat semua gambar memiliki ukuran yang sama */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2b2b52;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Contact Section - Social Media Icons */
+#contact {
+    background-color: #2b2b52;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+#contact a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    color: #fff;
+}
+
+/* Social Media Icons */
+#contact .social-icons {
+    margin-top: 20px;
+}
+
+#contact .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact .social-icons a:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-photo {
+        margin-top: 20px;
+    }
+}
+
+/* Icon Styles for Menu and Content */
+header nav ul li:before, 
+#about h2:before, 
+#skills h2:before, 
+#education h2:before, 
+#portfolio h2:before, 
+#contact h2:before {
+    content: url('path/to/icon.svg'); /* Ganti dengan path ikon */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+
+
+

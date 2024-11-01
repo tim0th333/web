@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> My Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase"></i> My Portfolio</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Me</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 style="text-align:left;">Hi There...</h2>
+                    <h1>I AM TIMOTHY SITANGGANG</h1>
+                    <p>Saya merupakan seorang Mahasiswa dari Program Studi  Sistem Informasi, Jurusan Teknik Informatika, Fakultas Teknik dan Kejuruan, Universitas Pendidikan Ganesha, Bali, Indonesia. Saat ini saya tinggal di Singaraja, Kabupaten Buleleng, Bali, Indonesia.</p>
+                    <ul class="biodata">
+                        <li>Agama: Kristen Protestan</li>
+                        <li>Jenis Kelamin: Laki - Laki</li>
+                        <li>Umur: 20 Tahun</li>
+                        <li>Tanggal Lahir: Medan, 29 Juli 2004</li>
+                        <li>Bahasa: Indonesia, Inggris (Conversational)</li>
+                        <li>No. Hp: 082380753577</li>
+                        <li>Email: <a href="mailto:timothysitanggangs@gmail.com">timothysitanggangs@gmail.com</a></li>
+                        <li>Alamat: Jl.Wijaya Kusuma, Gang 3, No.2</li>
+                    </ul>
+                    <a href="CV TIMOTHY.pdf" class="btn" download><i class="fas fa-download"></i> Download My CV</a>
+                    <a href="https://www.linkedin.com/in/timothy-sitanggang-b77986334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn"><i class="fab fa-linkedin"></i> Visit My LinkedIn</a>
+                </div>
+                <div class="about-photo">
+                    <img src="paspoto.jpeg" alt="Timothy Sitanggang" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2><i class="fas fa-tools"></i> MY SKILLS</h2>
+            <div class="skill">
+                <div class="skill-bar" style="width: 80%;">Kerjasama Tim - 80%</div>
+            </div>
+            <div class="skill">
+                <div class="skill-bar" style="width: 70%;">Desain Grafis - 70%</div>
+            </div>
+            <div class="skill">
+                <div class="skill-bar" style="width: 60%;">Fotografi - 60%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Riwayat Pendidikan Section -->
+    <section id="education">
+        <div class="container">
+            <h2><i class="fas fa-school"></i> EDUCATIONAL BACKGROUND</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3><i class="fas fa-graduation-cap"></i> SD Free Methodist 1 (2010 - 2015)</h3>
+                    <p>SD Free Methodist 1 Merupakan SD yang terletak di Jl. Beringin Raya No.152E, Helvetia, Kec. Medan Helvetia, Kota Medan, Sumatera Utara.</p>
+                </div>
+                <div class="education-item">
+                    <h3><i class="fas fa-graduation-cap"></i> SMP Negeri 18 Medan (2016 - 2018)</h3>
+                    <p>SMP Negeri 18 Medan Merupakan SMP yang terletak di Jl. Kemuning Perumnah, Helvetia, Kec. Medan Helvetia, Kota Medan, Sumatera Utara.</p>
+                </div>
+                <div class="education-item">
+                    <h3><i class="fas fa-graduation-cap"></i> SMA Negeri 12 Medan (2019 - 2022)</h3>
+                    <p>SMA Negeri 12 Medan Merupakan SMA yang terletak di Helvetia Tengah, Kec. Medan Helvetia, Kota Medan, Sumatera Utara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2><i class="fas fa-briefcase"></i> MY PORTFOLIO</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="asah.jpg" alt="Portfolio 1" onclick="openModal(this.src, this.alt)" />
+                    <p>UI Design Group Project (ASAH)</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="serti hr.png" alt="Portfolio 2" onclick="openModal(this.src, this.alt)" />
+                    <p>Hacker Rank Certificate</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="photografi.jpeg" alt="Portfolio 3" onclick="openModal(this.src, this.alt)" />
+                    <p>My Photografi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for image display -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <p>Email: <a href="mailto:timothysitanggangs@gmail.com">timothysitanggangs@gmail.com</a></p>
+            <p>No. Hp: 082380753577</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/tim0thyy____/profilecard/?igsh=MWVhY3JyNmpicGhpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/timoti.timoti.3133719?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/6282380753577" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Timothy Sitanggang. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle modal open and close
+        function openModal(src, alt) {
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            img.src = src;
+            captionText.innerHTML = alt; // Set the caption to the image alt text
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
